@@ -1,19 +1,16 @@
-# Página de Poesía de Mónica C. Crum
+# Mónica C. Crum
 
-¡Bienvenidos a la página de poesía dedicada a la talentosa poeta Mónica C. Crum! Este proyecto tiene como objetivo celebrar y compartir la obra de esta maravillosa autora.
+Proyecto de Integradora
 
-## Descripción del Proyecto
+## Cosas Pendientes
 
-Este sitio web está diseñado para mostrar la poesía de Mónica C. Crum, proporcionando una plataforma para que los amantes de la poesía puedan disfrutar de sus escritos. Aquí encontrarás una colección de sus poemas organizados por temas, así como información sobre su vida y obra.
-
-## Características
-
-- **Colección de Poemas**: Explora una amplia variedad de poemas escritos por Mónica C. Crum.
-- **Biografía**: Aprende más sobre la vida y trayectoria de la poeta.
-- **Temas**: Encuentra poemas organizados por temas específicos para facilitar la navegación.
-- **Comentarios**: Los usuarios pueden dejar comentarios y compartir sus pensamientos sobre los poemas.
-- **Diseño Responsivo**: El sitio está optimizado para ser accesible desde cualquier dispositivo, ya sea una computadora, tableta o teléfono móvil.
-
+- **Galeria**: Arreglar el PHP y hacer un nuevo diseño.
+- **Tienda**: Arreglar el PHP y hacer un nuevo diseño.
+- **Avisos**: Añadir un aviso para cuando el usuario cierre sesión.
+- **Telefonos**: Hacer que la pagina se adapte a los dispositivos moviles.
+- **Reels**: Añadir convertidor de link a embed (Se necesita un Token de Meta)
+- **Editar**: Añadir una funcion PHP para editar el contenido de las paginas (Texto/Imagenes)
+  
 ## Instalación
 
 Para ejecutar este proyecto localmente, sigue estos pasos:
