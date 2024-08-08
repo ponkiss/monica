@@ -27,7 +27,7 @@ $user_data = check_login($conn);
             </div>
             <div class="menu">
                 <a href="about/about.php">ABOUT ME</a>
-                <a href="logout/logout.php">LOG OUT</a>
+                <a href="logout/logout.php" id="logout-button">LOG OUT</a>
             </div>
         </nav>
     </header>
@@ -106,6 +106,17 @@ $user_data = check_login($conn);
             <p>Email: monicaccrum@gmail.com</p>
         </div>
     </div>
+    <div id="logout-modal" class="contact-modal">
+    <div class="contact-modal-content">
+        <h2>Confirm Logout</h2>
+        <p>Are you sure you want to log out?</p>
+        <div class="button-container">
+            <button id="confirm-logout">Yes</button>
+            <button id="cancel-logout">No</button>
+        </div>
+    </div>
+</div>
+
     <script src="../../assets/js/main.js"></script>
 </body>
 </html>
