@@ -19,7 +19,7 @@ $user_data = check_login($conn);
     <header>
         <nav>
             <div class="menu">
-                <a href="../login/login.php">GALLERY</a>
+                <a href="../gallery/gallery.php">GALLERY</a>
                 <a href="shop.php">STORE</a>
             </div>
             <div class="logo">

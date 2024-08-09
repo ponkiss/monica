@@ -1,7 +1,7 @@
 <?php
 session_start();
-include '../includes/config.php';
-include '../includes/functions.php';
+include '../../../includes/config.php';
+include '../../../includes/functions.php';
 
 if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
     header("Location: ../Normal/index.php");
@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['upload_image'])) {
     $description = mysqli_real_escape_string($conn, $_POST['description']);
     $tag = mysqli_real_escape_string($conn, $_POST['tag']);
     $image = $_FILES['image']['name'];
-    $target = "../assets/img/" . basename($image);
+    $target = "../../../assets/images/" . basename($image);
     $imageFileType = strtolower(pathinfo($target, PATHINFO_EXTENSION));
     $allowed_types = ['jpg', 'jpeg', 'png', 'gif'];
 
@@ -62,7 +62,7 @@ if (isset($_GET['delete_id'])) {
     $image = $row['image'];
 
     // Delete image file from server
-    $target = "../assets/img/" . $image;
+    $target = "../../../assets/images/" . $image;
     if (file_exists($target)) {
         unlink($target);
     }
@@ -93,28 +93,31 @@ $tags = mysqli_fetch_all($tags_result, MYSQLI_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería</title>
-    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>Gallery (Admin)</title>
+    <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="menu">
-                <a href="gallery.php">Gallery</a>
-                <a href="tienda.php">Store</a>
+                <a href="gallery.php">GALLERY</a>
+                <a href="../shop/shop.php">STORE</a>
             </div>
             <div class="logo">
-                <a href="index.php">MONICA C. CRUM</a>
+                <a href="../index.php">MONICA C. CRUM</a>
             </div>
             <div class="menu">
-                <a href="aboutme.php">About Me</a>
-                <a href="logout.php">Logout</a>
+                <a href="../about/about.php">ABOUT ME</a>
+                <a href="../logout/logout.php">LOG OUT</a>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <div class="main-content">
-            <h1>Galería</h1>
+
+    <main>
+        <section class="shop-grid">
             <?php if (isset($msg)) { echo "<p>$msg</p>"; } ?>
             <form method="GET" action="gallery.php" class="filter-form">
                 <label for="tag">Filter by tag:</label>
@@ -130,7 +133,7 @@ $tags = mysqli_fetch_all($tags_result, MYSQLI_ASSOC);
             <div class="gallery-grid">
                 <?php foreach ($images as $image): ?>
                     <div class="gallery-item">
-                        <img src="../assets/img/<?php echo $image['image']; ?>" alt="<?php echo $image['description']; ?>">
+                        <images src="../../../assets/images/<?php echo $image['image']; ?>" alt="<?php echo $image['description']; ?>">
                         <div class="item-details">
                             <form method="POST" action="gallery.php">
                                 <input type="hidden" name="id" value="<?php echo $image['id']; ?>">
@@ -146,21 +149,40 @@ $tags = mysqli_fetch_all($tags_result, MYSQLI_ASSOC);
                     </div>
                 <?php endforeach; ?>
             </div>
-        </div>
+        </section>
+    </main>
+
     <footer>
         <nav>
-            <div class="menu">
-                <a href="gallery.php">Gallery</a>
-                <a href="tienda.php">Store</a>
-            </div>
+            <div class="menu"></div>
             <div class="logo">
-                <a href="index.php">MONICA C. CRUM</a>
+                <a>MONICA C. CRUM</a>
             </div>
-            <div class="menu">
-                <a href="aboutme.php">About Me</a>
-                <a href="login.php">Sign Up</a>
-            </div>
+            <div class="menu"></div>
         </nav>
     </footer>
+
+    <div id="contact-bubble" class="contact-bubble">
+        <i class="fas fa-envelope"></i>
+    </div>
+    <div id="contact-modal" class="contact-modal">
+        <div class="contact-modal-content">
+            <span class="close-button">x</span>
+            <h2>Contact Me</h2>
+            <p>Email: monicaccrum@gmail.com</p>
+        </div>
+    </div>
+    <div id="logout-modal" class="contact-modal">
+        <div class="contact-modal-content">
+            <h2>Confirm Logout</h2>
+            <p>Are you sure you want to log out?</p>
+            <div class="button-group">
+                <button id="confirm-logout" class="confirm-button">Yes, log me out</button>
+                <button id="cancel-logout" class="cancel-button">Cancel</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="../../../assets/js/main.js"></script>
 </body>
 </html>
