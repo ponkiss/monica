@@ -39,7 +39,7 @@
         <div class="image-container">
             <img src="assets/images/monica.jpg" alt="Monica C. Crum">
             <div class="additional-text-container">
-                <h2>Know me</h2>
+                <h1>Know me</h1>
                 <p>Monica C. Crum is a passionate poet and writer who finds solace in the written word. Her work is a reflection of her life experiences, capturing the depth of her emotions and the resilience of the human spirit. Through her poetry, Monica aims to connect with readers on a profound level, offering a sense of understanding and comfort to those who may be navigating similar journeys.</p>
             </div>
         </div>
@@ -78,15 +78,11 @@
     <footer>
         <nav>
             <div class="menu">
-                <a href="gallery.php">PRIVACY</a>
-                <a href="shop.php">CREDITS</a>
             </div>
             <div class="logo">
                 <a>MONICA C. CRUM</a>
             </div>
             <div class="menu">
-                <a href="aboutme.php">INQUIRES</a>
-                <a href="login.php">MORE</a>
             </div>
         </nav>
     </footer>

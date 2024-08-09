@@ -22,8 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monica C. Crum | Sign Up</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Sign Up</title>
+    <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../../assets/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -46,8 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </header>
     <div class="parent-container">
         <div class="container3">
-            <h2>Create New Account</h2>
-            <p>Already Registered? <a href="Normal/../../login/login.php">Login</a></p>
+            <h2>Sign Up</h2>
             <form action="signup.php" method="POST">
                 <label for="username">Username:</label>
                 <input type="text" name="username" id="username" required>
@@ -57,20 +56,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="password" name="password" id="password" required>
                 <button type="submit">Sign Up</button>
             </form>
+            <p>Already Registered? <a href="Normal/../../login/login.php">Login</a></p>
         </div>
     </div>
     <footer>
         <nav>
             <div class="menu">
-                <a href="gallery.php">PRIVACY</a>
-                <a href="shop.php">CREDITS</a>
             </div>
             <div class="logo">
                 <a href="index.php">MONICA C. CRUM</a>
             </div>
             <div class="menu">
-                <a href="aboutme.php">INQUIRIES</a>
-                <a href="login.php">MORE</a>
             </div>
         </nav>
     </footer>

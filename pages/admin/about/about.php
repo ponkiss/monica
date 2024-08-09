@@ -9,8 +9,8 @@ $user_data = check_login($conn);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monica C. Crum | About Me (Admin)</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>About Me (Admin)</title>
+    <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../../assets/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -27,7 +27,7 @@ $user_data = check_login($conn);
             </div>
             <div class="menu">
                 <a href="about.php">ABOUT ME</a>
-                <a href="logout/logout.php" id="logout-button">LOG OUT</a>
+                <a href="../logout/logout.php">LOG OUT</a>
             </div>
         </nav>
     </header>
@@ -47,15 +47,11 @@ $user_data = check_login($conn);
     <footer>
         <nav>
             <div class="menu">
-                <a href="gallery.php">PRIVACY</a>
-                <a href="shop.php">CREDITS</a>
             </div>
             <div class="logo">
-                <a href="index.php">MONICA C. CRUM</a>
+                <a>MONICA C. CRUM</a>
             </div>
             <div class="menu">
-                <a href="aboutme.php">INQUIRIES</a>
-                <a href="login.php">MORE</a>
             </div>
         </nav>
     </footer>
@@ -69,17 +65,6 @@ $user_data = check_login($conn);
             <p>Email: monicaccrum@gmail.com</p>
         </div>
     </div>
-    <div id="logout-modal" class="contact-modal">
-    <div class="contact-modal-content">
-        <span class="close-button">x</span>
-        <h2>Confirm Logout</h2>
-        <p>Are you sure you want to log out?</p>
-        <div class="button-container">
-            <button id="confirm-logout">Yes</button>
-            <button id="cancel-logout">No</button>
-        </div>
-    </div>
-</div>
     <script src="../../../assets/js/main.js"></script>
 </body>
 </html>
