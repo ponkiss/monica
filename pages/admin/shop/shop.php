@@ -1,7 +1,7 @@
 <?php
 session_start();
-include '../includes/config.php';
-include '../includes/functions.php';
+include '../../../includes/config.php';
+include '../../../includes/functions.php';
 $user_data = check_login($conn);
 ?>
 <!DOCTYPE html>
@@ -9,46 +9,114 @@ $user_data = check_login($conn);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monica C. Crum - Store</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Store (Admin)</title>
+    <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="menu">
-                <a href="gallery.php">Gallery</a>
-                <a href="tienda.php">Store</a>
+                <a href="../login/login.php">GALLERY</a>
+                <a href="shop.php">STORE</a>
             </div>
             <div class="logo">
-                <a href="index.php">MONICA C. CRUM</a>
+                <a href="../index.php">MONICA C. CRUM</a>
             </div>
             <div class="menu">
-                <a href="aboutme.php">About Me</a>
-                <a href="logout.php">Logout</a>
+                <a href="../about/about.php">ABOUT ME</a>
+                <a href="../logout/logout.php">LOG OUT</a>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <h1>Store</h1>
-        <div class="product">
-            <img src="../assets/img/image.png" alt="Placeholder">
-            <h3>Placeholder Product</h3>
-            <p>$40.00</p>
-            <button>Edit</button>
-            <button>Delete</button>
-        </div>
-        <div class="container">
-            <h2>Add New Product</h2>
-            <form action="insert.php" method="POST">
-                <label for="name">Product Name:</label>
-                <input type="text" name="name" id="name" required>
-                <label for="price">Price:</label>
-                <input type="text" name="price" id="price" required>
-                <label for="image">Image URL:</label>
-                <input type="text" name="image" id="image" required>
-                <button type="submit">Add Product</button>
-            </form>
+
+    <main>
+        <section class="shop-grid">
+            <div class="shop-item">
+                <img src="https://placehold.co/600x400" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>$29.99</p>
+                <a href="https://www.amazon.com/s?k=Product+1"><button>Buy now!</button></a>
+            </div>
+            <div class="shop-item">
+                <img src="https://placehold.co/600x400" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>$39.99</p>
+                <a href="https://www.amazon.com/s?k=Product+2"><button>Buy now!</button></a>
+            </div>
+            <div class="shop-item">
+                <img src="https://placehold.co/600x400" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>$49.99</p>
+                <a href="https://www.amazon.com/s?k=Product+3"><button>Buy now!</button></a>
+            </div>
+            <div class="shop-item">
+                <img src="https://placehold.co/600x400" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>$49.99</p>
+                <a href="https://www.amazon.com/s?k=Product+3"><button>Buy now!</button></a>
+            </div>
+            <div class="shop-item">
+                <img src="https://placehold.co/600x400" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>$49.99</p>
+                <a href="https://www.amazon.com/s?k=Product+3"><button>Buy now!</button></a>
+            </div>
+            <div class="shop-item">
+                <img src="https://placehold.co/600x400" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>$49.99</p>
+                <a href="https://www.amazon.com/s?k=Product+3"><button>Buy now!</button></a>
+            </div>
+            <div class="shop-item">
+                <img src="https://placehold.co/600x400" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>$49.99</p>
+                <a href="https://www.amazon.com/s?k=Product+3"><button>Buy now!</button></a>
+            </div>
+            <div class="shop-item">
+                <img src="https://placehold.co/600x400" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>$49.99</p>
+                <a href="https://www.amazon.com/s?k=Product+3"><button>Buy now!</button></a>
+            </div>
+            <!-- Add more items as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <div class="menu"></div>
+            <div class="logo">
+                <a>MONICA C. CRUM</a>
+            </div>
+            <div class="menu"></div>
+        </nav>
+    </footer>
+
+    <div id="contact-bubble" class="contact-bubble">
+        <i class="fas fa-envelope"></i>
+    </div>
+    <div id="contact-modal" class="contact-modal">
+        <div class="contact-modal-content">
+            <span class="close-button">x</span>
+            <h2>Contact Me</h2>
+            <p>Email: monicaccrum@gmail.com</p>
         </div>
     </div>
+    <div id="logout-modal" class="contact-modal">
+        <div class="contact-modal-content">
+            <h2>Confirm Logout</h2>
+            <p>Are you sure you want to log out?</p>
+            <div class="button-group">
+                <button id="confirm-logout" class="confirm-button">Yes, log me out</button>
+                <button id="cancel-logout" class="cancel-button">Cancel</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="../../../assets/js/main.js"></script>
 </body>
 </html>

@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monica C. Crum | Gallery</title>
-    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>Gallery</title>
+    <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../../assets/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="menu">
-                <a href="gallery.php">GALLERY</a>
+                <a href="login.php">GALLERY</a>
                 <a href="tienda.php">STORE</a>
             </div>
             <div class="logo">

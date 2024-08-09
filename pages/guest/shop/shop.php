@@ -13,14 +13,14 @@
     <header>
         <nav>
             <div class="menu">
-                <a href="gallery.php">GALLERY</a>
+                <a href="../login/login.php">GALLERY</a>
                 <a href="shop.php">STORE</a>
             </div>
             <div class="logo">
                 <a href="../../../index.php">MONICA C. CRUM</a>
             </div>
             <div class="menu">
-                <a href="about.php">ABOUT ME</a>
+                <a href="../about/about.php">ABOUT ME</a>
                 <a href="../login/login.php">LOG IN</a>
             </div>
         </nav>
