@@ -1,10 +1,6 @@
 body {
     font-family: "Josefin Sans", sans-serif;
-    background-color: #f9f9f9;
-    background-image: url('../images/backgrounds/bg.jpg'); /* Replace with the path to your image */
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background: #f9f9f9 url('../images/backgrounds/bg.jpg') center/cover no-repeat;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -13,7 +9,7 @@ body {
 
 header, footer {
     background-color: #fff;
-    padding: 20px 0;
+    padding: 15px;
     text-align: center;
     font-family: "Bodoni Moda SC", serif;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -22,7 +18,6 @@ header, footer {
 footer {
     background-color: #000;
     color: #fff;
-    padding: 40px 0;
     margin-top: auto;
 }
 
@@ -37,8 +32,6 @@ header nav, footer nav {
 nav .menu a {
     margin: 0 20px;
     text-decoration: none;
-    transition: all 0.3s ease;
-    font-weight: 500;
     position: relative;
 }
 
@@ -47,7 +40,7 @@ header nav .menu a {
 }
 
 footer nav .menu a {
-    color: #fff;
+    color: #e7e7e7;
 }
 
 nav .menu a::before {
@@ -59,24 +52,19 @@ nav .menu a::before {
     left: 50%;
     transform: translateX(-50%);
     background-color: currentColor;
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 nav .menu a:hover::before {
-    visibility: visible;
     width: 100%;
 }
 
-nav .logo a {
+nav .logo a, footer nav .logo a {
+    user-select: none;
     font-size: 36px;
     font-weight: bold;
-    color: #333;
+    color: inherit;
     text-decoration: none;
-}
-
-footer nav .logo a {
-    color: #fff;
 }
 
 .parent-container {
@@ -84,48 +72,97 @@ footer nav .logo a {
     justify-content: center;
     margin: 30px auto;
     max-width: 1000px;
-    width: 100%;
+}
+
+.container, .container2, .image-container, .additional-text-container {
+    background-color: #fff;
+    border: 2px solid #ddd;
     box-sizing: border-box;
 }
 
 .container {
     flex: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    background-color: #ffffff;
-    border: 2px solid #ddd;
-    box-sizing: border-box;
 }
 
 .container2 {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #eeeeee;
-    border: 2px solid #ddd;
-    box-sizing: border-box;
+    background-color: #eee;
 }
 
-/* Contact Bubble */
-/* Contact Bubble */
+.image-container {
+    flex: 1;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.additional-text-container {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.additional-text-container h2, h1 {
+    font-family: "Bodoni Moda SC", serif;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #333;
+}
+
+.additional-text-container p, p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+.intro-content, .intro-text {
+    padding: 20px 30px;
+}
+
+.container3, .contact-modal-content {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+}
+
+.container3 label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.container3 input[type="text"], .container3 input[type="email"], .container3 input[type="password"], .container3 button, .contact-modal-content button {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+.container3 button, .contact-modal-content button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
 .contact-bubble {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #000;
-    color: #fff;
     width: 65px;
     height: 65px;
     border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #000;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
+    cursor: pointer;
     transition: background-color 0.5s, color 0.5s;
 }
 
@@ -143,25 +180,17 @@ footer nav .logo a {
     color: #000;
 }
 
-/* Modal Window */
 .contact-modal {
     display: none;
     position: fixed;
-    z-index: 1001;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 .contact-modal-content {
-    background-color: #fff;
     margin: 15% auto;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
     max-width: 400px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -174,220 +203,17 @@ footer nav .logo a {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    cursor: pointer;
 }
 
-.close-button:hover,
-.close-button:focus {
+.close-button:hover, .close-button:focus {
     color: black;
     text-decoration: none;
-    cursor: pointer;
 }
 
-
-
-.image-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    margin-left: 20px;
-    background-color: #ffffff;
-    border: 2px solid #ddd;
-    width: 100%;
-    height: 100%; /* Adjust as needed */
-}
-
-.additional-text-container {
-    margin-top: 20px;
-    background-color: #fff;
-    padding: 20px;
-    border: 2px solid #ddd;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.additional-text-container h2 {
-    color: #333;
-    font-family: "Bodoni Moda SC", serif;
-    font-size: 28px;
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
-}
-
-.additional-text-container p {
-    color: #555;
-    font-size: 18px;
-    line-height: 1.8;
-    text-align: justify;
-}
-
-.image-container img {
-    max-width: 100%;
-    height: auto;
-}
-
-.intro-content {
-    display: flex;
-    width: 100%;
-}
-
-.intro-text {
-    width: 100%;
-    padding: 20px 30px;
-    box-sizing: border-box;
-}
-
-.outer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f9f9f9; /* Optional: Set a background color */
-}
-
-.container3 {
-    text-align: center;
-    padding: 40px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.container3 label,
-.container3 input[type="text"],
-.container3 input[type="email"],
-.container3 input[type="password"],
-.container3 button {
-    width: 80%; /* Adjust this value as needed */
-    max-width: 500px; /* Optional: Limits the width of form elements */
-}
-
-.container3 label {
-    display: block;
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 10px;
-    text-align: left; /* Aligns the text of the label to the left */
-    width: 100%; /* Ensures label takes full width of the parent */
-}
-
-.container3 input[type="text"],
-.container3 input[type="email"],
-.container3 input[type="password"] {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.container3 button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: background-color 0.3s ease;
-}
-
-.container3 button:hover {
-    background-color: #555;
-}
-
-/* EL PEPEPEPEPEPE */
-
-.contact-modal-content button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: background-color 0.3s ease;
-}
-
-.contact-modal-content button:hover {
-    background-color: #555;
-}
-
-.contact-modal-content {
-    text-align: center;
-    padding: 40px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-
-h1 {
-    color: #333;
-    font-family: "Bodoni Moda SC", serif;
-    font-size: 36px;
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
-}
-
-p {
-    color: #555;
-    font-size: 18px;
-    line-height: 1.8;
-    text-align: justify;
-}
-
-.login-warning {
-    text-align: center;
-    border: 2px dashed #333;
-    padding: 40px;
-    margin: 40px 0;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-}
-
-.login-warning p {
-    color: #000000;
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.login-warning .button {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #fff;
-    background-color: #000000;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.login-warning .button:hover {
-    background-color: #242424;
-}
-
-h2 {
-    flex: 1;
+.intro, h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #000000;
-    font-family: "Bodoni Moda SC", serif;
-    font-size: 36px;
-}
-
-.intro {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #000000;
-    font-size: 20px;
+    color: #000;
 }

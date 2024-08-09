@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monica C. Crum | Welcome</title>
+    <title>Monica C. Crum</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@
         <div class="image-container">
             <img src="assets/images/monica.jpg" alt="Monica C. Crum">
             <div class="additional-text-container">
-                <h2>About the Author</h2>
+                <h2>Know me</h2>
                 <p>Monica C. Crum is a passionate poet and writer who finds solace in the written word. Her work is a reflection of her life experiences, capturing the depth of her emotions and the resilience of the human spirit. Through her poetry, Monica aims to connect with readers on a profound level, offering a sense of understanding and comfort to those who may be navigating similar journeys.</p>
             </div>
         </div>
@@ -82,7 +82,7 @@
                 <a href="shop.php">CREDITS</a>
             </div>
             <div class="logo">
-                <a href="index.php">MONICA C. CRUM</a>
+                <a>MONICA C. CRUM</a>
             </div>
             <div class="menu">
                 <a href="aboutme.php">INQUIRES</a>

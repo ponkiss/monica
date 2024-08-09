@@ -45,7 +45,7 @@
                 <a href="shop.php">CREDITS</a>
             </div>
             <div class="logo">
-                <a href="index.php">MONICA C. CRUM</a>
+                <a href="about.php">MONICA C. CRUM</a>
             </div>
             <div class="menu">
                 <a href="aboutme.php">INQUIRIES</a>
