@@ -5,6 +5,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden; /* Evitar desbordamiento horizontal */
 }
 
 header, footer {
@@ -266,3 +267,82 @@ h2 {
     background-color: #555;
 }
 
+@media (max-width: 768px) {
+    
+    nav .menu a {
+        user-select: none;
+        margin: 0 20px;
+        text-decoration: none;
+        position: relative;
+    }
+    
+    .parent-container {
+        flex-direction: column;
+    }
+
+    .container, .container2, .image-container, .additional-text-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .image-container {
+        margin-left: 0;
+    }
+
+    .image-container img {
+        width: 100%;
+    }
+
+    .shop-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav, footer nav {
+        flex-direction: column;
+    }
+
+    nav .menu a {
+        margin: 10px 0;
+    }
+
+    .image-container img {
+        width: 100%;
+    }
+
+    nav .logo a, footer nav .logo a {
+        font-size: 24px;
+    }
+
+    .contact-bubble {
+        bottom: 10px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .contact-bubble i {
+        font-size: 20px;
+    }
+
+    .contact-modal-content {
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .shop-item h3 {
+        font-size: 20px;
+    }
+
+    .shop-item p {
+        font-size: 16px;
+    }
+}
