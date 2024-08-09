@@ -6,6 +6,7 @@ $user_data = check_login($conn);
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,7 @@ $user_data = check_login($conn);
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -102,6 +104,19 @@ $user_data = check_login($conn);
             <p>Email: monicaccrum@gmail.com</p>
         </div>
     </div>
+    <div id="logout-modal" class="contact-modal">
+        <div class="contact-modal-content">
+            <h2>Confirm Logout</h2>
+            <p>Are you sure you want to log out?</p>
+            <div class="button-group">
+                <button id="confirm-logout" class="confirm-button">Yes, log me out</button>
+                <button id="cancel-logout" class="cancel-button">Cancel</button>
+            </div>
+
+        </div>
+    </div>
+
     <script src="../../assets/js/main.js"></script>
 </body>
+
 </html>

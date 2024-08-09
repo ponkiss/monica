@@ -65,6 +65,17 @@ $user_data = check_login($conn);
             <p>Email: monicaccrum@gmail.com</p>
         </div>
     </div>
+    <div id="logout-modal" class="contact-modal">
+        <div class="contact-modal-content">
+            <h2>Confirm Logout</h2>
+            <p>Are you sure you want to log out?</p>
+            <div class="button-group">
+                <button id="confirm-logout" class="confirm-button">Yes, log me out</button>
+                <button id="cancel-logout" class="cancel-button">Cancel</button>
+            </div>
+
+        </div>
+    </div>
     <script src="../../../assets/js/main.js"></script>
 </body>
 </html>

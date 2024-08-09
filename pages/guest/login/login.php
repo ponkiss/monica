@@ -50,16 +50,6 @@
             </div>
         </nav>
     </footer>
-    <div id="contact-bubble" class="contact-bubble">
-        <i class="fas fa-envelope"></i>
-    </div>
-    <div id="contact-modal" class="contact-modal">
-        <div class="contact-modal-content">
-            <span class="close-button">x</span>
-            <h2>Contact Me</h2>
-            <p>Email: monicaccrum@gmail.com</p>
-        </div>
-    </div>
     <script src="../../../assets/js/main.js"></script>
 </body>
 </html>
