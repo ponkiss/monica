@@ -14,7 +14,7 @@
         <nav>
             <div class="menu">
                 <a href="gallery.php">GALLERY</a>
-                <a href="tienda.php">STORE</a>
+                <a href="pages/guest/shop/shop.php">STORE</a>
             </div>
             <div class="logo">
                 <a href="index.php">MONICA C. CRUM</a>

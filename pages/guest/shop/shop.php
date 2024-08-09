@@ -3,47 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monica C. Crum - Store</title>
-    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>Store</title>
+    <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="menu">
-                <a href="gallery.php">Gallery</a>
-                <a href="tienda.php">Store</a>
+                <a href="gallery.php">GALLERY</a>
+                <a href="shop.php">STORE</a>
             </div>
             <div class="logo">
-                <a href="index.php">MONICA C. CRUM</a>
+                <a href="../../../index.php">MONICA C. CRUM</a>
             </div>
             <div class="menu">
-                <a href="aboutme.php">About Me</a>
-                <a href="login.php">Sign Up</a>
+                <a href="about.php">ABOUT ME</a>
+                <a href="../login/login.php">LOG IN</a>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <h1>Store</h1>
-        <div class="product">
-            <img src="../assets/img/image.png" alt="Placeholder">
-            <h3>Placeholder Product</h3>
-            <p>$40.00</p>
-        </div>
-    </div>
+
+    <main>
+        <section class="shop-grid">
+            <div class="shop-item">
+                <img src="https://placehold.co/600x400" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>$29.99</p>
+                <a href="https://www.amazon.com/s?k=Product+1"><button>Buy now!</button></a>
+            </div>
+            <div class="shop-item">
+                <img src="https://placehold.co/600x400" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>$39.99</p>
+                <a href="https://www.amazon.com/s?k=Product+2"><button>Buy now!</button></a>
+            </div>
+            <div class="shop-item">
+                <img src="https://placehold.co/600x400" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>$49.99</p>
+                <a href="https://www.amazon.com/s?k=Product+3"><button>Buy now!</button></a>
+            </div>
+            <div class="shop-item">
+                <img src="https://placehold.co/600x400" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>$49.99</p>
+                <a href="https://www.amazon.com/s?k=Product+3"><button>Buy now!</button></a>
+            </div>
+            <div class="shop-item">
+                <img src="https://placehold.co/600x400" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>$49.99</p>
+                <a href="https://www.amazon.com/s?k=Product+3"><button>Buy now!</button></a>
+            </div>
+            <div class="shop-item">
+                <img src="https://placehold.co/600x400" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>$49.99</p>
+                <a href="https://www.amazon.com/s?k=Product+3"><button>Buy now!</button></a>
+            </div>
+            <div class="shop-item">
+                <img src="https://placehold.co/600x400" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>$49.99</p>
+                <a href="https://www.amazon.com/s?k=Product+3"><button>Buy now!</button></a>
+            </div>
+            <div class="shop-item">
+                <img src="https://placehold.co/600x400" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>$49.99</p>
+                <a href="https://www.amazon.com/s?k=Product+3"><button>Buy now!</button></a>
+            </div>
+            <!-- Add more items as needed -->
+        </section>
+    </main>
+
     <footer>
         <nav>
-            <div class="menu">
-                <a href="gallery.php">Gallery</a>
-                <a href="tienda.php">Store</a>
-            </div>
+            <div class="menu"></div>
             <div class="logo">
-                <a href="index.php">MONICA C. CRUM</a>
+                <a>MONICA C. CRUM</a>
             </div>
-            <div class="menu">
-                <a href="aboutme.php">About Me</a>
-                <a href="login.php">Sign Up</a>
-            </div>
+            <div class="menu"></div>
         </nav>
     </footer>
+
+    <div id="contact-bubble" class="contact-bubble">
+        <i class="fas fa-envelope"></i>
+    </div>
+    <div id="contact-modal" class="contact-modal">
+        <div class="contact-modal-content">
+            <span class="close-button">x</span>
+            <h2>Contact Me</h2>
+            <p>Email: monicaccrum@gmail.com</p>
+        </div>
+    </div>
+    <script src="../../../assets/js/main.js"></script>
 </body>
 </html>
