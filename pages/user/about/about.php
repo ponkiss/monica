@@ -9,8 +9,8 @@ $user_data = check_login($conn);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monica C. Crum | About Me</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>About Me</title>
+    <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../../assets/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -47,15 +47,11 @@ $user_data = check_login($conn);
     <footer>
         <nav>
             <div class="menu">
-                <a href="gallery.php">PRIVACY</a>
-                <a href="shop.php">CREDITS</a>
             </div>
             <div class="logo">
-                <a href="index.php">MONICA C. CRUM</a>
+                <a>MONICA C. CRUM</a>
             </div>
             <div class="menu">
-                <a href="aboutme.php">INQUIRIES</a>
-                <a href="login.php">MORE</a>
             </div>
         </nav>
     </footer>
@@ -67,6 +63,17 @@ $user_data = check_login($conn);
             <span class="close-button">x</span>
             <h2>Contact Me</h2>
             <p>Email: monicaccrum@gmail.com</p>
+        </div>
+    </div>
+    <div id="logout-modal" class="contact-modal">
+        <div class="contact-modal-content">
+            <h2>Confirm Logout</h2>
+            <p>Are you sure you want to log out?</p>
+            <div class="button-group">
+                <button id="confirm-logout" class="confirm-button">Yes, log me out</button>
+                <button id="cancel-logout" class="cancel-button">Cancel</button>
+            </div>
+
         </div>
     </div>
     <script src="../../../assets/js/main.js"></script>

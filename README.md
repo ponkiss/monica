@@ -8,7 +8,7 @@ Proyecto de Integradora
 
 - **Galeria**: Arreglar el PHP y hacer un nuevo diseño. 🛣️
 - **Tienda**: Arreglar el PHP y hacer un nuevo diseño. ❌
-- **Avisos**: Añadir un aviso para cuando el usuario cierre sesión. ❌
+- **Avisos**: Añadir un aviso para cuando el usuario cierre sesión. ✅
 - **Telefonos**: Hacer que la pagina se adapte a los dispositivos moviles. 🛣️
 - **Reels**: Añadir convertidor de link a embed (Se necesita un Token de Meta) ❌
 - **Editar**: Añadir una funcion PHP para editar el contenido de las paginas (Texto/Imagenes) 🛣️
